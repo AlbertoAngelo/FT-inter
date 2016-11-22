@@ -1,0 +1,280 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Title -->
+    <title>FT GO | Encontre seu Food Truck!</title>
+
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <!--Container-->
+    <div class="container">
+        <!--Basic Form-->
+        <form action="/Cadastrar" class="well form-horizontal" method="post" id="basic_form">
+            <h3>Cadastro</h3>
+            <hr />
+
+
+            <!-- Text input name-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="name" id="name" placeholder="Name" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input phone-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Phone</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="phone" placeholder="(99)9999-9999" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input cel-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Cel</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input name="cel" placeholder="(99)99999-9999" class="form-control" type="text">
+                    </div>
+                </div>
+            </div> <br />
+
+
+            <!-- Radio cliente/food-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Tipo:</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <input type="radio" name="tipo" value="1" id="cliente" class="clienteRadio"> Cliente
+                        <input type="radio" name="tipo" value="0" id="food_truck" class="foodRadio"> Food Truck
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input email-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">E-mail</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="exemplo@exemplo.com" class="form-control" type="email">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input senha-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <input name="senha" placeholder="*******" class="form-control" type="password">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input confirmSenha-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Confirm Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span>
+                        <input name="confirmSenha" placeholder="*******" class="form-control" type="password">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="well form-horizontal" method="post" id="cliente_form" hidden="hidden">
+                <h4>Informações adicionais</h4>
+                <hr />
+                <!-- Text input cpf-->
+                <div class="form-group" id="cpf">
+                    <label class="col-md-4 control-label">CPF</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="cpf" placeholder="999.999.999-99" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div><!--Cliente Form-->
+            <!--Truck Form-->
+            <div class="well form-horizontal" method="post" id="truck_form" hidden="hidden">
+                <h4>Informações adicionais</h4>
+                <hr />
+
+                <!-- Text input cnpj-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">CNPJ</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="cnpj" placeholder="99.999.999/9999-99" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input nomeTruck-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Name Truck</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-text-background"></i></span>
+                            <input name="nomeTruck" placeholder="Exemplo Truck" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input descricao-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Descrição</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-text-size"></i></span>
+                            <textarea placeholder="Escreva aqui em poucas palavras uma descrição do seu FoodTruck" rows="5" cols="43" name="descricao"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input cep-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">CEP</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="cep" placeholder="999999-999" class="form-control" type="text" id="cep">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input uf-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Estado</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="uf" placeholder="AA" class="form-control" type="text" id="uf">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input cidade-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Cidade</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="cidade" placeholder="cidade" class="form-control" type="text" id="cidade">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input bairro-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Bairro</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="bairro" placeholder="bairro" class="form-control" type="text" id="bairro">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input endereco-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Endereço</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="endereco" placeholder="endereco" class="form-control" type="text" id="endereco">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input numero-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Numero</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="numero" placeholder="numero" class="form-control" type="text" id="numero">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input Referencia-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Referencia</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="referencia" placeholder="referencia" class="form-control" type="text" id="referencia">
+                        </div>
+                    </div>
+                </div>
+
+            </div><!--Fim FORM-->
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-warning" id="cadastrar">Send <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div><!-- Button -->
+
+
+        </form>
+        <!--Basic Form-->
+        <!--Cliente Form-->
+
+
+
+    </div><!--Container-->
+
+
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/cadastro.js"></script>
+
+</body>
+</html>

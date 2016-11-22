@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Index", "Login"))
+{
+
+    <!-- main -->
+    <div class="main">
+        <!-- header -->
+        <header class="header-site">
+            <div class="logo-site animated bounceInDown" data-animation-delay="700">
+                <h1>FT Go</h1>
+            </div>
+        </header>
+        <!-- /header -->
+        <!-- section -->
+        <section class="section fullscreen site-main">
+            <div class="container-section">
+                <div class="container-table">
+                    <div class="content-table">
+                        <!-- bt-carousel -->
+                        <div class="bt-carousel">
+
+                            <!-- about section -->
+                            <div class="item-slide show">
+                                <!-- container -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+
+                                            <!-- header section -->
+                                            <div class="header-section animated bounceInDown" data-animation-delay="700">
+                                                <!-- title section -->
+                                                <h3 class="title-section">Bem vindo ao FT Go</h3><!-- /title section -->
+                                                <div class="line-separate line-white line-center"><span></span></div>
+                                            </div>
+                                            <!-- /header section -->
+                                            <!-- content slide -->
+                                            <div class="content-slide aboutus">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-md-6 animated bounceInLeft" data-animation-delay="700">
+                                                        <h4>Faça seu login</h4>
+                                                        <div class="pregress-bar">
+                                                            <div>
+                                                                <h7>Digite seu E-mail:</h7> <br />
+                                                                <input type="email" name="email">
+                                                            </div>
+                                                            <div>
+                                                                <h7>Digite sua senha:</h7> <br />
+                                                                <input type="password" name="senha">
+                                                            </div>
+                                                            <div>
+                                                                <button type="submit" id="subscribebtn" class="border-button no-bottom-margin">Entrar</button>
+
+                                                                @if (ViewBag.Mensagem != null)
+                                                                {
+                                                                    <div class="alert alert-danger">
+                                                                        @ViewBag.Mensagem
+                                                                    </div>
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /col-xs-12 col-md-6 -->
+                                                    <!-- video section -->
+                                                    <div class="col-xs-12 col-md-6 video-section animated bounceInRight" data-animation-delay="700">
+                                                        <div class="big-video center">
+                                                            <h3>Não possui um cadastro?</h3>
+                                                            <div class="video-content">
+                                                                <a href="/Cadastrar" id="subscribebtn" class="border-button no-bottom-margin">CADASTRE-SE</a>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- /video section -->
+                                                </div><!-- /row -->
+                                            </div><!-- /content slide -->
+                                        </div>
+                                    </div><!-- /row -->
+                                </div><!-- /container -->
+                            </div>
+                            <!-- about section -->
+
+                        </div><!-- /bt-carousel -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /section -->
+    </div><!-- /main -->
+}
